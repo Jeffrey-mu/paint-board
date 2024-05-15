@@ -6,10 +6,10 @@ import { resolve } from 'path'
 
 import tailwindcss from 'tailwindcss'
 import autoprefixer from 'autoprefixer'
-
+const base = '/paint-board'
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/paint-board',
+  base,
   server: {
     host: '0.0.0.0'
   },
@@ -30,5 +30,8 @@ export default defineConfig({
     postcss: {
       plugins: [autoprefixer, tailwindcss]
     }
+  },
+  build: {
+    outDir: base.slice(1) // 将文件打包到 dist 目录
   }
 })
