@@ -18,7 +18,16 @@ const GuideInfo: React.FC = () => {
     i18n.changeLanguage(newLanguage)
     updateLanguage(newLanguage)
   }
-
+  return (
+    <div className="fixed bottom-5 left-5 flex flex-row justify-center items-center px-2.5 py-1.5 rounded-full bg-[#eef1ff]">
+      <span
+        className="cursor-pointer border-solid border-4 border-[#7b8fa1] rounded-full hover:border-[#567189] flex items-center justify-center"
+        onClick={handleChangLang}
+      >
+        {language === 'en' ? <EnIcon /> : <ZhIcon />}
+      </span>
+    </div>
+  )
   return (
     <>
       <div className="fixed bottom-5 left-5 flex flex-row justify-center items-center px-2.5 py-1.5 rounded-full bg-[#eef1ff]">
