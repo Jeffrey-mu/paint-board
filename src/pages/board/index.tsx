@@ -39,7 +39,7 @@ const Board: React.FC = () => {
       {canvasLoaded && (
         <>
           <ToolPanel />
-          <GuideInfo />
+          {/* <GuideInfo /> */}
           <CleanModal />
           <DeleteFileModal />
           <BoardOperation />
